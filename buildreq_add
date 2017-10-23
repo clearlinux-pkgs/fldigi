@@ -1,0 +1,9 @@
+# This file contains additional build requirements that did not get
+# picked up automatically. One name per line, no whitespace.
+fltk-dev
+libjpeg-turbo-dev
+libXrender-dev
+libXcursor-dev
+libXft-dev
+fontconfig-dev
+hamlib-dev
