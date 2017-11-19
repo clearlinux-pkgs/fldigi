@@ -10,6 +10,8 @@ libm.so.6
 libpng16.so.16
 libportaudio.so.2
 libpthread.so.0
+libpulse-simple.so.0
+libpulse.so.0
 libsamplerate.so.0
 libsndfile.so.1
 libstdc++.so.6

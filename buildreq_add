@@ -7,3 +7,4 @@ libXcursor-dev
 libXft-dev
 fontconfig-dev
 hamlib-dev
+pulseaudio-dev
