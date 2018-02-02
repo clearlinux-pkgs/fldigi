@@ -4,7 +4,7 @@
 #
 Name     : fldigi
 Version  : 4.0.13
-Release  : 6
+Release  : 7
 URL      : https://sourceforge.net/projects/fldigi/files/fldigi/fldigi-4.0.13.tar.gz
 Source0  : https://sourceforge.net/projects/fldigi/files/fldigi/fldigi-4.0.13.tar.gz
 Summary  : No detailed summary available
