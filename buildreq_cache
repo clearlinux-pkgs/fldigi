@@ -1,0 +1,7 @@
+4.0.18
+alsa-lib-dev
+asciidoc
+libXinerama-dev
+libsndfile-dev
+pkgconfig(samplerate)
+pkgconfig(xext)
