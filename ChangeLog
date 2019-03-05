@@ -1,8 +1,48 @@
 
 
-=Version 4.0.18=
+=Version 4.1.01=
 
-2018-08-12  David Freese  <w1hkj@bellsouth.net>
+2019-02-18  David Freese  <w1hkj@bellsouth.net>
+
+	1d4798c: CW h/w ptt
+	ca3e777: nanoIO
+	a943ae3: NAVTEX abort
+	ce586b8: dup-check
+	57cc6ea: ADIF submode
+	96e1f05: WF only bug fix
+	06c56b3: LotW
+	c5af7e0: Pedantic warnings
+	892336b: SD counties
+	044dd29: QRZ.com
+	aeed471: SV1GRB test report
+
+
+=Version 4.1.0=
+
+	39a76e8: po update
+	79c67d3: WWV doc
+	04e53b5: Winkeyer FSK
+	b8ca88e: Contests
+	b197c75: arq-override
+	8572f35: flmsg-dir
+	02c66eb: contest-docs
+	9d85169: fldigi_def.xml
+	20e2c02: socket_mods
+	e1c2d80: Fltk 1.4 mod
+	5ffd6f5: wefax
+	fb1fd67: nanoIO
+	7d604b8: CW SOM table
+	4eec8f2: flrig: macro
+	99b0a01: Audio adjust docs
+	146bd7e: feldhell
+	6b5c93a: C-11 fixes
+	ccbd52f: nano FSK
+	ed6a7db: Mint-19/Mate
+	e9c0f2d: Signal Browser documentation
+	fbb0654: flrig seg fault
+
+
+=Version 4.0.18=
 
 	2fef9cb: CPS testing
 	aa757af: ipv6 addressing

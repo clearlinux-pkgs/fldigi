@@ -1,0 +1,1 @@
+--enable-optimizations=sse3 --enable-debug
