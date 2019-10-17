@@ -4,7 +4,7 @@
 #
 Name     : fldigi
 Version  : 4.1.08
-Release  : 20
+Release  : 21
 URL      : https://sourceforge.net/projects/fldigi/files/fldigi/fldigi-4.1.08.tar.gz
 Source0  : https://sourceforge.net/projects/fldigi/files/fldigi/fldigi-4.1.08.tar.gz
 Summary  : Library to access network sites using https protocol
@@ -22,12 +22,15 @@ BuildRequires : fontconfig-dev
 BuildRequires : hamlib-dev
 BuildRequires : libXcursor-dev
 BuildRequires : libXft-dev
+BuildRequires : libXinerama-dev
 BuildRequires : libXrender-dev
 BuildRequires : libjpeg-turbo-dev
 BuildRequires : libsndfile-dev
 BuildRequires : pkgconfig(portaudio-2.0)
 BuildRequires : pkgconfig(samplerate)
+BuildRequires : pkgconfig(xext)
 BuildRequires : pulseaudio-dev
+Patch1: CVE-2019-16910.patch
 
 %description
 Fldigi is a software modem for Amateur Radio use. It is a sound card based
@@ -78,18 +81,19 @@ man components for the fldigi package.
 
 %prep
 %setup -q -n fldigi-4.1.08
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1565894519
+export SOURCE_DATE_EPOCH=1571276877
 export GCC_IGNORE_WERROR=1
-export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$CFLAGS -fno-lto "
-export FFLAGS="$CFLAGS -fno-lto "
-export CXXFLAGS="$CXXFLAGS -fno-lto "
+export CFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
+export FCFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
+export FFLAGS="$CFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
+export CXXFLAGS="$CXXFLAGS -fno-lto -fstack-protector-strong -mzero-caller-saved-regs=used "
 %configure --disable-static --enable-optimizations=sse3 --enable-debug
 make  %{?_smp_mflags}
 
@@ -101,11 +105,11 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1565894519
+export SOURCE_DATE_EPOCH=1571276877
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/fldigi
-cp COPYING %{buildroot}/usr/share/package-licenses/fldigi/COPYING
-cp src/mbedtls/LICENSE %{buildroot}/usr/share/package-licenses/fldigi/src_mbedtls_LICENSE
+cp %{_builddir}/fldigi-4.1.08/COPYING %{buildroot}/usr/share/package-licenses/fldigi/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+cp %{_builddir}/fldigi-4.1.08/src/mbedtls/LICENSE %{buildroot}/usr/share/package-licenses/fldigi/941df1b3181ce17b8441e0e3775808f266a80fc8
 %make_install
 %find_lang fldigi
 
@@ -130,8 +134,8 @@ cp src/mbedtls/LICENSE %{buildroot}/usr/share/package-licenses/fldigi/src_mbedtl
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/fldigi/COPYING
-/usr/share/package-licenses/fldigi/src_mbedtls_LICENSE
+/usr/share/package-licenses/fldigi/8624bcdae55baeef00cd11d5dfcfa60f68710a02
+/usr/share/package-licenses/fldigi/941df1b3181ce17b8441e0e3775808f266a80fc8
 
 %files man
 %defattr(0644,root,root,0755)
