@@ -1,0 +1,40 @@
+From 4023060beaf6e28a795396a039563760282d8c28 Mon Sep 17 00:00:00 2001
+From: "Brett T. Warden" <brett.t.warden@intel.com>
+Date: Tue, 26 May 2020 16:27:50 -0700
+Subject: [PATCH] Remove redundant struct debug
+
+---
+ src/flarq-src/flarq.cxx | 16 ----------------
+ 1 file changed, 16 deletions(-)
+
+diff --git a/src/flarq-src/flarq.cxx b/src/flarq-src/flarq.cxx
+index 17b8d7e2e9f9..4ef85b40c322 100644
+--- a/src/flarq-src/flarq.cxx
++++ b/src/flarq-src/flarq.cxx
+@@ -2053,22 +2053,7 @@ void open_nbems_file_folder()
+ 	cb_mnuVisitURL(0, (void*)NBEMS_dir.c_str());
+ }
+ 
+-//----------------------------------------------------------------------
+-// dummy class debug included to allow sharing source with fldigi
+-//----------------------------------------------------------------------
+-struct debug
+-{
+-	enum level_e {
+-		QUIET_LEVEL, ERROR_LEVEL, WARN_LEVEL, INFO_LEVEL,
+-		VERBOSE_LEVEL, DEBUG_LEVEL, LOG_NLEVELS
+-	};
+-	static void log(debug::level_e, const char*, const char*, int line, const char* ...);
+-	static level_e level;
+-	static int mask;
+-};
+-
+ debug::level_e debug::level = debug::INFO_LEVEL;
+ 
+-int debug::mask;
++unsigned int debug::mask;
+-
+ void debug::log(debug::level_e, const char*, const char*, int line, const char* ...) {}
+-- 
+2.26.2
+
