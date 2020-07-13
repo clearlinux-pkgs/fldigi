@@ -1,5 +1,5 @@
 PKG_NAME := fldigi
-URL = https://sourceforge.net/projects/fldigi/files/fldigi/fldigi-4.1.13.tar.gz
+URL = https://sourceforge.net/projects/fldigi/files/fldigi/fldigi-4.1.14.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
