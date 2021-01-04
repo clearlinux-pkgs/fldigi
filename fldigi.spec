@@ -4,7 +4,7 @@
 #
 Name     : fldigi
 Version  : 4.1.17
-Release  : 30
+Release  : 31
 URL      : https://sourceforge.net/projects/fldigi/files/fldigi/fldigi-4.1.17.tar.gz
 Source0  : https://sourceforge.net/projects/fldigi/files/fldigi/fldigi-4.1.17.tar.gz
 Summary  : Library to access network sites using https protocol
