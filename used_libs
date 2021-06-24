@@ -14,3 +14,4 @@ libpulse.so.0
 libsamplerate.so.0
 libsndfile.so.1
 libstdc++.so.6
+libudev.so.1
