@@ -1,6 +1,5 @@
-Configure miss: CFLocaleCopyPreferredLanguages
+Configure miss: FLXMLRPC
+Configure miss: LIBMBEDTLS
 Configure miss: dev/ppbus/ppi.h
 Configure miss: dev/ppbus/ppi.h presence
 Configure miss: dev/ppbus/ppi.h usability
-Configure miss: flxmlrpc >= 1.0.1
-Configure miss: libmbedtls >= 2.16.0
