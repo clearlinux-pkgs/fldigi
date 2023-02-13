@@ -1,5 +1,6 @@
-Configure miss: FLXMLRPC
-Configure miss: LIBMBEDTLS
+Configure miss: 32-bit host C ABI
+Configure miss: CFLocaleCopyPreferredLanguages
 Configure miss: dev/ppbus/ppi.h
-Configure miss: dev/ppbus/ppi.h presence
-Configure miss: dev/ppbus/ppi.h usability
+Configure miss: flxmlrpc >= 1.0.1
+Configure miss: g++ option to enable C++11 features
+Configure miss: libmbedtls >= 2.16.0

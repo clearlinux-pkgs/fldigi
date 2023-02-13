@@ -1,7 +1,6 @@
-4.1.23
+4.1.24
 alsa-lib-dev
 asciidoc
-libsndfile-dev
 pkgconfig(samplerate)
 pkgconfig(sndfile)
 systemd-dev
