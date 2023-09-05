@@ -4,10 +4,10 @@
 # Using build pattern: configure
 #
 Name     : fldigi
-Version  : 4.1.27
-Release  : 42
-URL      : https://sourceforge.net/projects/fldigi/files/fldigi/fldigi-4.1.27.tar.gz
-Source0  : https://sourceforge.net/projects/fldigi/files/fldigi/fldigi-4.1.27.tar.gz
+Version  : 4.2.00
+Release  : 43
+URL      : https://sourceforge.net/projects/fldigi/files/fldigi/fldigi-4.2.00.tar.gz
+Source0  : https://sourceforge.net/projects/fldigi/files/fldigi/fldigi-4.2.00.tar.gz
 Summary  : Library to access network sites using https protocol
 Group    : Development/Tools
 License  : GPL-2.0 GPL-3.0
@@ -84,11 +84,11 @@ man components for the fldigi package.
 
 
 %prep
-%setup -q -n fldigi-4.1.27
-cd %{_builddir}/fldigi-4.1.27
+%setup -q -n fldigi-4.2.00
+cd %{_builddir}/fldigi-4.2.00
 %patch -P 1 -p1
 pushd ..
-cp -a fldigi-4.1.27 buildavx2
+cp -a fldigi-4.2.00 buildavx2
 popd
 
 %build
@@ -96,7 +96,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1689789432
+export SOURCE_DATE_EPOCH=1693925915
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -fstack-protector-strong -fzero-call-used-regs=used -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -fstack-protector-strong -fzero-call-used-regs=used -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
@@ -125,7 +125,7 @@ cd ../buildavx2;
 make %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1689789432
+export SOURCE_DATE_EPOCH=1693925915
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/fldigi
 cp %{_builddir}/fldigi-%{version}/COPYING %{buildroot}/usr/share/package-licenses/fldigi/8624bcdae55baeef00cd11d5dfcfa60f68710a02 || :

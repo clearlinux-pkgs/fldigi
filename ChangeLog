@@ -1,5 +1,11 @@
-2023-07-19  dave-w1hkj  <w1hkj@bellsouth.net>
+2023-08-30  dave-w1hkj  <w1hkj@bellsouth.net>
 
+	65599e949: Version 4.2.00
+	d01751cce: TTY ptt dtr/rts
+	885ef1ff8: THOR56
+	12ed9b841: THOR 32/44
+	fd4388110: Waterfall cursor
+	5d4a6fa80: Revert "FSQ s/n"
 	b6d34d0f6: Version 4.1.27
 	24e8c0559: Macro <PAUSE>
 
